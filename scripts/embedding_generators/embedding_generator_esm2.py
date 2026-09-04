@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Script to extract the last_hidden_state from ESM-2 models.
 # Author: Sara Tolosa Alarcón
 
@@ -117,8 +119,17 @@ def main():
     data = read_fasta(args.input_path)
 
     # Run now the model
-    extract_embeddings(model, n_layers, batch_converter, device, data, args.normalized, args.model_name, args.output_path)
-
+    start_time = time.time()
+    extract_embeddings(model, n_layers, 
+                       batch_converter, 
+                       device, 
+                       data, 
+                       args.normalized, 
+                       args.model_name, 
+                       args.output_path)
+    end_time = time.time()
+    print(f"It takes: {end_time-start_time}")
+    print("""\nWork completed!\n""")
+    
 if __name__ == "__main__":
     main()
-    print("""\nWork completed!\n""")
