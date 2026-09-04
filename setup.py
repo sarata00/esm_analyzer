@@ -17,7 +17,7 @@ setuptools.setup(
     entry_points={
         "console_scripts": [
             "embedding_analyzer = scripts.analysis.__main__:main",
-            "embedding_generator_esm = scripts.embedding_generators.embedding_generator_esm:main",
+            "embedding_generator_esm = scripts.embedding_generators.embedding_generator_esm2:main",
             "embedding_generator_HF = scripts.embedding_generators.embedding_generator_hugging_face:main",
         ]
     }, 

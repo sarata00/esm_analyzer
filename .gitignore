@@ -1,2 +1,11 @@
 # Folders
 __pycache__/
+.pytest_cache/
+*.egg-info/
+.vscode/
+
+# Compiled / editor artifacts
+*.pyc
+
+# Raw embedding tensors (too large for git; regenerate with embedding_generators)
+data/*.pth
